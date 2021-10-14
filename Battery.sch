@@ -1,0 +1,1320 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "2S Li-Ion Battery Charger"
+Date "2021-09-28"
+Rev "1.1"
+Comp "Cambridge University Spaceflight"
+Comment1 "Drawn By Henry Franks"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery:Conn_01x03 J1
+U 1 1 6150A0FF
+P 1450 2600
+F 0 "J1" H 1550 2650 50  0000 L CNN
+F 1 "BATTERY" H 1550 2550 50  0000 L CNN
+F 2 "Battery:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal" H 1450 2600 50  0001 C CNN
+F 3 "~" H 1450 2600 50  0001 C CNN
+F 4 "2820685" H 1450 2600 50  0001 C CNN "Farnell"
+F 5 "~" H 1450 2600 50  0001 C CNN "RS"
+	1    1450 2600
+	-1   0    0    -1  
+$EndComp
+Text Label 2150 2600 0    50   ~ 0
+BATT_MON
+Text Label 2150 2700 0    50   ~ 0
+BATT-
+$Comp
+L Battery:R R3
+U 1 1 6150BE46
+P 2950 2450
+F 0 "R3" H 3000 2500 50  0000 C CNN
+F 1 "261" H 3000 2400 50  0000 C CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2950 2450 50  0001 C CNN
+F 3 "~" H 2950 2450 50  0001 C CNN
+F 4 "2303485" H 2950 2450 50  0001 C CNN "Farnell"
+F 5 "~" H 2950 2450 50  0001 C CNN "RS"
+	1    2950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:R R4
+U 1 1 6150BFFF
+P 2950 2750
+F 0 "R4" H 3000 2800 50  0000 C CNN
+F 1 "100" H 3000 2700 50  0000 C CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2950 2750 50  0001 C CNN
+F 3 "~" H 2950 2750 50  0001 C CNN
+F 4 "2447552" H 2950 2750 50  0001 C CNN "Farnell"
+F 5 "~" H 2950 2750 50  0001 C CNN "RS"
+	1    2950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:C C3
+U 1 1 6150C73E
+P 3200 2550
+F 0 "C3" V 3250 2600 50  0000 L BNN
+F 1 "100n" V 3300 2600 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3200 2550 50  0001 C CNN
+F 3 "~" H 3200 2550 50  0001 C CNN
+F 4 "1759166" H 3200 2550 50  0001 C CNN "Farnell"
+F 5 "~" H 3200 2550 50  0001 C CNN "RS"
+	1    3200 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:C C2
+U 1 1 6150CCFF
+P 3200 2250
+F 0 "C2" V 3250 2300 50  0000 L BNN
+F 1 "100n" V 3300 2300 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3200 2250 50  0001 C CNN
+F 3 "~" H 3200 2250 50  0001 C CNN
+F 4 "1759166" H 3200 2250 50  0001 C CNN "Farnell"
+F 5 "~" H 3200 2250 50  0001 C CNN "RS"
+	1    3200 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 2950 4350 3050
+Wire Wire Line
+	3700 2650 3850 2650
+Wire Wire Line
+	3700 2650 3700 2800
+Wire Wire Line
+	3700 2900 3700 3050
+Wire Wire Line
+	3700 3050 4350 3050
+Connection ~ 4350 3050
+Wire Wire Line
+	3200 2250 3200 2150
+Wire Wire Line
+	3050 2450 3200 2450
+Wire Wire Line
+	3200 2450 3200 2350
+Wire Wire Line
+	3200 2550 3200 2450
+Connection ~ 3200 2450
+Wire Wire Line
+	3200 2650 3200 3050
+Wire Wire Line
+	3550 2750 3550 2550
+Wire Wire Line
+	3050 2750 3550 2750
+Wire Wire Line
+	3550 2150 3550 2350
+Wire Wire Line
+	3200 2150 3550 2150
+Wire Wire Line
+	3550 2550 3850 2550
+Wire Wire Line
+	3200 2450 3850 2450
+Wire Wire Line
+	3550 2350 3850 2350
+Wire Wire Line
+	3200 3050 3700 3050
+Connection ~ 3700 3050
+Text Label 2150 2500 0    50   ~ 0
+BATT+
+Connection ~ 3200 2150
+Wire Wire Line
+	3200 2150 3050 2150
+$Comp
+L Battery:R R2
+U 1 1 6150B4DD
+P 2950 2150
+F 0 "R2" H 3000 2200 50  0000 C CNN
+F 1 "160" H 3000 2100 50  0000 C CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2950 2150 50  0001 C CNN
+F 3 "~" H 2950 2150 50  0001 C CNN
+F 4 "2694996" H 2950 2150 50  0001 C CNN "Farnell"
+F 5 "~" H 2950 2150 50  0001 C CNN "RS"
+	1    2950 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3050 2750 3050
+Connection ~ 3200 3050
+Wire Wire Line
+	2950 2750 2850 2750
+Wire Wire Line
+	2850 2750 2850 2600
+Wire Wire Line
+	2850 2450 2950 2450
+Connection ~ 2850 2600
+Wire Wire Line
+	2850 2600 2850 2450
+Wire Wire Line
+	2750 2700 2750 3050
+Wire Wire Line
+	2750 2500 2750 2150
+Wire Wire Line
+	2750 2150 2950 2150
+Connection ~ 2750 2150
+Wire Wire Line
+	1650 2600 2850 2600
+Wire Wire Line
+	1650 2700 1900 2700
+Wire Wire Line
+	1650 2500 2000 2500
+Wire Wire Line
+	5400 3150 5400 3050
+$Comp
+L Battery:GND #PWR04
+U 1 1 6152978E
+P 5400 3150
+F 0 "#PWR04" H 5270 3190 50  0001 L CNN
+F 1 "GND" H 5400 3050 50  0000 C CNN
+F 2 "" H 5400 3150 50  0001 C CNN
+F 3 "" H 5400 3150 50  0001 C CNN
+	1    5400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:C C5
+U 1 1 6150CEF5
+P 3700 2800
+F 0 "C5" V 3750 2850 50  0000 L BNN
+F 1 "330n" V 3800 2850 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3700 2800 50  0001 C CNN
+F 3 "~" H 3700 2800 50  0001 C CNN
+F 4 "2346946" H 3700 2800 50  0001 C CNN "Farnell"
+F 5 "~" H 3700 2800 50  0001 C CNN "RS"
+	1    3700 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 1600 5400 1500
+$Comp
+L Battery:VBATT #PWR03
+U 1 1 61529B5B
+P 5400 1500
+F 0 "#PWR03" H 5400 1610 50  0001 L CNN
+F 1 "VBATT" H 5400 1600 50  0000 C CNN
+F 2 "" H 5400 1500 50  0001 C CNN
+F 3 "" H 5400 1500 50  0001 C CNN
+	1    5400 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 4350 1600
+Wire Wire Line
+	2750 1600 2750 2150
+Wire Wire Line
+	4350 1600 2750 1600
+$Comp
+L Battery:R R6
+U 1 1 6150DC08
+P 4350 1700
+F 0 "R6" V 4400 1750 50  0000 L BNN
+F 1 "100" V 4450 1750 50  0000 L CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 4350 1700 50  0001 C CNN
+F 3 "~" H 4350 1700 50  0001 C CNN
+F 4 "2447552" H 4350 1700 50  0001 C CNN "Farnell"
+F 5 "~" H 4350 1700 50  0001 C CNN "RS"
+	1    4350 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 1800 4350 1900
+Wire Wire Line
+	4350 1700 4350 1600
+$Comp
+L Battery:LTC4002ES8 U2
+U 1 1 6154E4E0
+P 3600 4550
+F 0 "U2" H 3950 5000 50  0000 L CNN
+F 1 "LTC4002ES8" H 3950 4900 50  0000 L CNN
+F 2 "Battery:SO-8_3.9x4.9mm_P1.27mm" H 3450 5300 50  0001 C CNN
+F 3 "" H 3450 5300 50  0001 C CNN
+F 4 "~" H 3600 4550 50  0001 C CNN "Farnell"
+F 5 "786-9960" H 3600 4550 50  0001 C CNN "RS"
+	1    3600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:C C4
+U 1 1 6155AC8E
+P 3450 5200
+F 0 "C4" V 3450 5250 50  0000 L BNN
+F 1 "470n" V 3500 5250 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3450 5200 50  0001 C CNN
+F 3 "~" H 3450 5200 50  0001 C CNN
+F 4 "2320847" H 3450 5200 50  0001 C CNN "Farnell"
+F 5 "~" H 3450 5200 50  0001 C CNN "RS"
+	1    3450 5200
+	0    -1   1    0   
+$EndComp
+$Comp
+L Battery:R R5
+U 1 1 6155B0FA
+P 3450 5400
+F 0 "R5" V 3450 5450 50  0000 L BNN
+F 1 "2k2" V 3500 5450 50  0000 L CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3450 5400 50  0001 C CNN
+F 3 "~" H 3450 5400 50  0001 C CNN
+F 4 "1576464" H 3450 5400 50  0001 C CNN "Farnell"
+F 5 "~" H 3450 5400 50  0001 C CNN "RS"
+	1    3450 5400
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3450 5200 3450 5150
+Wire Wire Line
+	3450 5300 3450 5400
+Wire Wire Line
+	3450 5500 3450 5600
+$Comp
+L Battery:Conn_01x02 J2
+U 1 1 6160B74D
+P 6550 4550
+F 0 "J2" H 6650 4550 50  0000 L CNN
+F 1 "CHG" H 6650 4450 50  0000 L CNN
+F 2 "Battery:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal" H 6550 4550 50  0001 C CNN
+F 3 "~" H 6550 4550 50  0001 C CNN
+F 4 "2576866" H 6550 4550 50  0001 C CNN "Farnell"
+F 5 "~" H 6550 4550 50  0001 C CNN "RS"
+	1    6550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3800 3600 3950
+Wire Wire Line
+	2750 3850 2750 3800
+Connection ~ 3600 3800
+Wire Wire Line
+	5150 4100 5150 4250
+Wire Wire Line
+	5150 4550 4000 4550
+Wire Wire Line
+	5150 4250 5300 4250
+Connection ~ 5150 4250
+Wire Wire Line
+	5150 4250 5150 4550
+$Comp
+L Battery:R R7
+U 1 1 616A9DB1
+P 5300 4250
+F 0 "R7" H 5350 4300 50  0000 C CNN
+F 1 "100k" H 5350 4200 50  0000 C CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5300 4250 50  0001 C CNN
+F 3 "~" H 5300 4250 50  0001 C CNN
+F 4 "2380290" H 5300 4250 50  0001 C CNN "Farnell"
+F 5 "~" H 5300 4250 50  0001 C CNN "RS"
+	1    5300 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3800 5550 3800
+Wire Wire Line
+	5550 3800 5550 4250
+Wire Wire Line
+	5550 4250 5400 4250
+Connection ~ 5550 4250
+Wire Wire Line
+	5550 4250 5550 4550
+Wire Wire Line
+	5550 4550 6350 4550
+$Comp
+L Battery:L L1
+U 1 1 616DE2EA
+P 2750 4350
+F 0 "L1" V 2800 4400 50  0000 L BNN
+F 1 "6u8" V 2850 4400 50  0000 L CNN
+F 2 "Battery:L_Wuerth_HCI-7050" H 2750 4350 50  0001 C CNN
+F 3 "~" H 2750 4350 50  0001 C CNN
+F 4 "756-8588" V 2750 4350 50  0001 C CNN "RS"
+F 5 "~" H 2750 4350 50  0001 C CNN "Farnell"
+	1    2750 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 4050 3100 4050
+Wire Wire Line
+	3100 4050 3100 4400
+Wire Wire Line
+	3100 4400 3200 4400
+$Comp
+L Battery:R R1
+U 1 1 61733A3A
+P 2750 4700
+F 0 "R1" V 2850 4800 50  0000 C BNN
+F 1 "50m" V 2750 4750 50  0000 L CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2750 4700 50  0001 C CNN
+F 3 "~" H 2750 4700 50  0001 C CNN
+F 4 "2008296" V 2750 4700 50  0001 C CNN "Farnell"
+F 5 "~" H 2750 4700 50  0001 C CNN "RS"
+	1    2750 4700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2750 4250 2750 4300
+Wire Wire Line
+	3100 4700 3200 4700
+$Comp
+L Battery:C C1
+U 1 1 6177FA9D
+P 2750 5300
+F 0 "C1" V 2800 5350 50  0000 L BNN
+F 1 "22u" V 2850 5350 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2750 5300 50  0001 C CNN
+F 3 "~" H 2750 5300 50  0001 C CNN
+F 4 "2525135" H 2750 5300 50  0001 C CNN "Farnell"
+F 5 "~" H 2750 5300 50  0001 C CNN "RS"
+	1    2750 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 5150 3750 5300
+Wire Wire Line
+	3600 5150 3600 5600
+Wire Wire Line
+	3750 5400 3750 5600
+Wire Wire Line
+	3750 5600 3600 5600
+Wire Wire Line
+	2750 5400 2750 5600
+Connection ~ 3450 5600
+Wire Wire Line
+	3450 5600 2750 5600
+Connection ~ 3600 5600
+Wire Wire Line
+	3600 5600 3450 5600
+Connection ~ 2750 5600
+Text Label 2150 5100 0    50   ~ 0
+BATT+
+Text Label 2150 5600 0    50   ~ 0
+BATT-
+Wire Wire Line
+	5550 5600 5550 4650
+Wire Wire Line
+	5550 4650 6350 4650
+Connection ~ 3750 5600
+$Comp
+L Battery:B330 D1
+U 1 1 6181A973
+P 2550 4600
+F 0 "D1" V 2600 4550 50  0000 R BNN
+F 1 "B330" V 2650 4550 50  0000 R CNN
+F 2 "Battery:D_SMB_Handsoldering" H 2500 4570 50  0001 C CNN
+F 3 "~" H 2600 4670 50  0001 C CNN
+F 4 "~" H 2550 4600 50  0001 C CNN "Farnell"
+F 5 "751-3269" H 2550 4600 50  0001 C CNN "RS"
+	1    2550 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 4300 2550 4300
+Wire Wire Line
+	2550 4300 2550 4600
+Connection ~ 2750 4300
+Wire Wire Line
+	2750 4300 2750 4350
+Connection ~ 2750 5100
+Wire Wire Line
+	2750 5100 2750 5300
+Wire Wire Line
+	4950 3800 4800 3800
+Connection ~ 4500 3800
+Connection ~ 4800 3800
+Wire Wire Line
+	3600 3800 4500 3800
+Wire Wire Line
+	4500 3800 4800 3800
+Wire Wire Line
+	4500 3900 4500 3800
+Wire Wire Line
+	4800 3800 4800 3900
+Wire Wire Line
+	4650 4100 4800 4100
+Connection ~ 4650 4100
+Wire Wire Line
+	4500 4100 4650 4100
+$Comp
+L Battery:C C6
+U 1 1 6187C87A
+P 4500 3900
+F 0 "C6" V 4500 3950 50  0000 L BNN
+F 1 "100n" V 4550 3950 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4500 3900 50  0001 C CNN
+F 3 "~" H 4500 3900 50  0001 C CNN
+F 4 "1759166" H 4500 3900 50  0001 C CNN "Farnell"
+F 5 "~" H 4500 3900 50  0001 C CNN "RS"
+	1    4500 3900
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4800 4100 4800 4000
+Wire Wire Line
+	4500 4000 4500 4100
+$Comp
+L Battery:C C7
+U 1 1 618B3B27
+P 4800 3900
+F 0 "C7" V 4800 3950 50  0000 L BNN
+F 1 "10u" V 4850 3950 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4800 3900 50  0001 C CNN
+F 3 "~" H 4800 3900 50  0001 C CNN
+F 4 "2611940" H 4800 3900 50  0001 C CNN "Farnell"
+F 5 "~" H 4800 3900 50  0001 C CNN "RS"
+	1    4800 3900
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4650 4100 4650 4200
+$Comp
+L Battery:GND #PWR02
+U 1 1 618D04E1
+P 4650 4200
+F 0 "#PWR02" H 4520 4240 50  0001 L CNN
+F 1 "GND" H 4650 4100 50  0000 C CNN
+F 2 "" H 4650 4200 50  0001 C CNN
+F 3 "" H 4650 4200 50  0001 C CNN
+	1    4650 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5700 5400 5600
+$Comp
+L Battery:GND #PWR05
+U 1 1 61905543
+P 5400 5700
+F 0 "#PWR05" H 5270 5740 50  0001 L CNN
+F 1 "GND" H 5400 5600 50  0000 C CNN
+F 2 "" H 5400 5700 50  0001 C CNN
+F 3 "" H 5400 5700 50  0001 C CNN
+	1    5400 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:Conn_01x02 J3
+U 1 1 61549E44
+P 6550 2450
+F 0 "J3" H 6650 2450 50  0000 L CNN
+F 1 "PWR" H 6650 2350 50  0000 L CNN
+F 2 "Battery:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal" H 6550 2450 50  0001 C CNN
+F 3 "~" H 6550 2450 50  0001 C CNN
+F 4 "2576866" H 6550 2450 50  0001 C CNN "Farnell"
+F 5 "~" H 6550 2450 50  0001 C CNN "RS"
+	1    6550 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 1600 5550 2450
+Wire Wire Line
+	5550 2550 6350 2550
+Wire Wire Line
+	5550 2450 6350 2450
+Wire Wire Line
+	5550 2550 5550 3050
+Connection ~ 4350 1900
+$Comp
+L Battery:C C8
+U 1 1 619204B7
+P 5250 2350
+F 0 "C8" V 5300 2400 50  0000 L BNN
+F 1 "100n" V 5350 2400 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5250 2350 50  0001 C CNN
+F 3 "~" H 5250 2350 50  0001 C CNN
+F 4 "1759166" H 5250 2350 50  0001 C CNN "Farnell"
+F 5 "~" H 5250 2350 50  0001 C CNN "RS"
+	1    5250 2350
+	0    1    1    0   
+$EndComp
+Text Label 9100 4650 0    50   ~ 0
+BATT_MON
+Text Label 9100 4550 0    50   ~ 0
+BATT+
+Wire Wire Line
+	9100 4550 9550 4550
+Wire Wire Line
+	9100 4650 9550 4650
+Wire Wire Line
+	2750 3800 3600 3800
+Wire Wire Line
+	4350 1900 4350 2050
+Connection ~ 5550 3800
+Wire Wire Line
+	5550 3800 5650 3800
+$Comp
+L Battery:MAX604 U3
+U 1 1 61995AC1
+P 8350 1750
+F 0 "U3" H 8350 2100 50  0000 C CNN
+F 1 "MAX604" H 8350 2000 50  0000 C CNN
+F 2 "Battery:SOIC-8_3.9x4.9mm_P1.27mm" H 8350 2075 50  0001 C CIN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX603-MAX604.pdf" H 8350 1700 50  0001 C CNN
+F 4 "2518575" H 8350 1750 50  0001 C CNN "Farnell"
+F 5 "~" H 8350 1750 50  0001 C CNN "RS"
+	1    8350 1750
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 4550
+Wire Wire Line
+	7950 1650 7850 1650
+Wire Wire Line
+	7850 1650 7850 1750
+Wire Wire Line
+	7850 1750 7950 1750
+Wire Wire Line
+	7850 1650 7650 1650
+Connection ~ 7850 1650
+Wire Wire Line
+	7650 1650 7650 1550
+$Comp
+L Battery:VBATT #PWR06
+U 1 1 619B436B
+P 7650 1550
+F 0 "#PWR06" H 7650 1660 50  0001 L CNN
+F 1 "VBATT" H 7650 1650 50  0000 C CNN
+F 2 "" H 7650 1550 50  0001 C CNN
+F 3 "" H 7650 1550 50  0001 C CNN
+	1    7650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:C C9
+U 1 1 619B494E
+P 7650 1900
+F 0 "C9" V 7700 1950 50  0000 L BNN
+F 1 "10u" V 7750 1950 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7650 1900 50  0001 C CNN
+F 3 "~" H 7650 1900 50  0001 C CNN
+F 4 "2611940" H 7650 1900 50  0001 C CNN "Farnell"
+F 5 "~" H 7650 1900 50  0001 C CNN "RS"
+	1    7650 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 2050 8350 2150
+Wire Wire Line
+	8350 2150 7650 2150
+Wire Wire Line
+	7650 2150 7650 2000
+Wire Wire Line
+	7650 1900 7650 1650
+Connection ~ 7650 1650
+Wire Wire Line
+	7650 2150 7650 2250
+Connection ~ 7650 2150
+$Comp
+L Battery:GND #PWR07
+U 1 1 619C3FE6
+P 7650 2250
+F 0 "#PWR07" H 7520 2290 50  0001 L CNN
+F 1 "GND" H 7650 2150 50  0000 C CNN
+F 2 "" H 7650 2250 50  0001 C CNN
+F 3 "" H 7650 2250 50  0001 C CNN
+	1    7650 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 1750 8850 1750
+Wire Wire Line
+	8850 2150 8350 2150
+Connection ~ 8350 2150
+$Comp
+L Battery:C C11
+U 1 1 619D389A
+P 9300 1900
+F 0 "C11" V 9350 1950 50  0000 L BNN
+F 1 "10u" V 9400 1950 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 9300 1900 50  0001 C CNN
+F 3 "~" H 9300 1900 50  0001 C CNN
+F 4 "2611940" H 9300 1900 50  0001 C CNN "Farnell"
+F 5 "~" H 9300 1900 50  0001 C CNN "RS"
+	1    9300 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8750 1650 9300 1650
+Wire Wire Line
+	9300 1900 9300 1800
+Wire Wire Line
+	9300 1650 9300 1550
+Connection ~ 9300 1650
+Wire Wire Line
+	9300 2000 9300 2150
+Wire Wire Line
+	9300 2150 8850 2150
+Connection ~ 8850 2150
+$Comp
+L Battery:MAX604 U4
+U 1 1 619ED53E
+P 8350 3100
+F 0 "U4" H 8350 3450 50  0000 C CNN
+F 1 "MAX604" H 8350 3350 50  0000 C CNN
+F 2 "Battery:SOIC-8_3.9x4.9mm_P1.27mm" H 8350 3425 50  0001 C CIN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX603-MAX604.pdf" H 8350 3050 50  0001 C CNN
+F 4 "2518575" H 8350 3100 50  0001 C CNN "Farnell"
+F 5 "~" H 8350 3100 50  0001 C CNN "RS"
+	1    8350 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3000 7850 3000
+Wire Wire Line
+	7850 3000 7850 3100
+Wire Wire Line
+	7850 3100 7950 3100
+Wire Wire Line
+	7850 3000 7650 3000
+Connection ~ 7850 3000
+Wire Wire Line
+	7650 3000 7650 2900
+$Comp
+L Battery:VBATT #PWR08
+U 1 1 619ED54A
+P 7650 2900
+F 0 "#PWR08" H 7650 3010 50  0001 L CNN
+F 1 "VBATT" H 7650 3000 50  0000 C CNN
+F 2 "" H 7650 2900 50  0001 C CNN
+F 3 "" H 7650 2900 50  0001 C CNN
+	1    7650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:C C10
+U 1 1 619ED550
+P 7650 3250
+F 0 "C10" V 7700 3300 50  0000 L BNN
+F 1 "10u" V 7750 3300 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7650 3250 50  0001 C CNN
+F 3 "~" H 7650 3250 50  0001 C CNN
+F 4 "2611940" H 7650 3250 50  0001 C CNN "Farnell"
+F 5 "~" H 7650 3250 50  0001 C CNN "RS"
+	1    7650 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 3400 8350 3500
+Wire Wire Line
+	8350 3500 7650 3500
+Wire Wire Line
+	7650 3500 7650 3350
+Wire Wire Line
+	7650 3250 7650 3000
+Connection ~ 7650 3000
+Wire Wire Line
+	7650 3500 7650 3600
+Connection ~ 7650 3500
+$Comp
+L Battery:GND #PWR09
+U 1 1 619ED55D
+P 7650 3600
+F 0 "#PWR09" H 7520 3640 50  0001 L CNN
+F 1 "GND" H 7650 3500 50  0000 C CNN
+F 2 "" H 7650 3600 50  0001 C CNN
+F 3 "" H 7650 3600 50  0001 C CNN
+	1    7650 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3100 8850 3100
+Wire Wire Line
+	8850 3100 8850 3250
+Wire Wire Line
+	8850 3350 8850 3500
+Wire Wire Line
+	8850 3500 8350 3500
+Connection ~ 8350 3500
+$Comp
+L Battery:C C12
+U 1 1 619ED568
+P 9300 3250
+F 0 "C12" V 9350 3300 50  0000 L BNN
+F 1 "10u" V 9400 3300 50  0000 L CNN
+F 2 "Battery:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 9300 3250 50  0001 C CNN
+F 3 "~" H 9300 3250 50  0001 C CNN
+F 4 "2611940" V 9300 3250 50  0001 C CNN "Farnell"
+F 5 "~" H 9300 3250 50  0001 C CNN "RS"
+	1    9300 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8750 3000 9300 3000
+Wire Wire Line
+	9300 3250 9300 3150
+Wire Wire Line
+	9300 3000 9300 2900
+Connection ~ 9300 3000
+Wire Wire Line
+	9300 3350 9300 3500
+Wire Wire Line
+	9300 3500 8850 3500
+Connection ~ 8850 3500
+Wire Wire Line
+	8850 1750 8850 2150
+$Comp
+L Battery:3v3 #PWR010
+U 1 1 619FB4B4
+P 9300 1550
+F 0 "#PWR010" H 9300 1660 50  0001 L CNN
+F 1 "3v3" H 9300 1650 50  0000 C CNN
+F 2 "" H 9300 1550 50  0001 C CNN
+F 3 "" H 9300 1550 50  0001 C CNN
+	1    9300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:1v8 #PWR011
+U 1 1 61A1DAE4
+P 9300 2900
+F 0 "#PWR011" H 9300 3010 50  0001 L CNN
+F 1 "1v8" H 9300 3000 50  0000 C CNN
+F 2 "" H 9300 2900 50  0001 C CNN
+F 3 "" H 9300 2900 50  0001 C CNN
+	1    9300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:R R8
+U 1 1 61A1E758
+P 8850 3250
+F 0 "R8" V 8850 3300 50  0000 L BNN
+F 1 "200k" V 8900 3300 50  0000 L CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 8850 3250 50  0001 C CNN
+F 3 "~" H 8850 3250 50  0001 C CNN
+F 4 "2380505" V 8850 3250 50  0001 C CNN "Farnell"
+F 5 "~" H 8850 3250 50  0001 C CNN "RS"
+	1    8850 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:R R9
+U 1 1 61A1F154
+P 9050 3100
+F 0 "R9" H 9100 3150 50  0000 C CNN
+F 1 "100k" H 9100 3050 50  0000 C CNN
+F 2 "Battery:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 9050 3100 50  0001 C CNN
+F 3 "~" H 9050 3100 50  0001 C CNN
+F 4 "2380290" H 9050 3100 50  0001 C CNN "Farnell"
+F 5 "~" H 9050 3100 50  0001 C CNN "RS"
+	1    9050 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 3100 9050 3100
+Connection ~ 8850 3100
+Wire Wire Line
+	9150 3100 9300 3100
+Connection ~ 9300 3100
+Wire Wire Line
+	9300 3100 9300 3000
+$Comp
+L Battery:Conn_01x02 J4
+U 1 1 61A32B0A
+P 10400 2050
+F 0 "J4" H 10500 2050 50  0000 L CNN
+F 1 "3v3" H 10500 1950 50  0000 L CNN
+F 2 "Battery:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal" H 10400 2050 50  0001 C CNN
+F 3 "~" H 10400 2050 50  0001 C CNN
+F 4 "2576866" H 10400 2050 50  0001 C CNN "Farnell"
+F 5 "~" H 10400 2050 50  0001 C CNN "RS"
+	1    10400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 2150 10200 2150
+Connection ~ 9300 2150
+Wire Wire Line
+	9600 2050 10200 2050
+Wire Wire Line
+	9600 1800 9300 1800
+$Comp
+L Battery:Conn_01x02 J5
+U 1 1 61A5B09F
+P 10400 3400
+F 0 "J5" H 10500 3400 50  0000 L CNN
+F 1 "1v8" H 10500 3300 50  0000 L CNN
+F 2 "Battery:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal" H 10400 3400 50  0001 C CNN
+F 3 "~" H 10400 3400 50  0001 C CNN
+F 4 "2576866" H 10400 3400 50  0001 C CNN "Farnell"
+F 5 "~" H 10400 3400 50  0001 C CNN "RS"
+	1    10400 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 3500 10200 3500
+Wire Wire Line
+	9600 3400 10200 3400
+Wire Wire Line
+	9600 3150 9300 3150
+Connection ~ 9300 3150
+Wire Wire Line
+	9300 3150 9300 3100
+Wire Wire Line
+	9600 3400 9600 3150
+Connection ~ 9300 1800
+Wire Wire Line
+	9600 2050 9600 1800
+Wire Wire Line
+	9300 1650 9300 1800
+Connection ~ 9300 3500
+$Comp
+L Battery:TestPoint TP7
+U 1 1 61A85144
+P 9700 1800
+F 0 "TP7" V 9750 1900 50  0000 C TNN
+F 1 "TestPoint" H 9800 1850 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9900 1800 50  0001 C CNN
+F 3 "~" H 9900 1800 50  0001 C CNN
+F 4 "~" H 9700 1800 50  0001 C CNN "Farnell"
+F 5 "~" H 9700 1800 50  0001 C CNN "RS"
+	1    9700 1800
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	9700 1800 9600 1800
+Connection ~ 9600 1800
+Wire Wire Line
+	9700 3150 9600 3150
+Connection ~ 2750 4550
+Wire Wire Line
+	2750 4550 2750 4600
+Wire Wire Line
+	2750 4450 2750 4550
+Wire Wire Line
+	2750 4550 3200 4550
+Wire Wire Line
+	2750 4750 2750 5100
+Connection ~ 2750 4750
+Wire Wire Line
+	3100 4750 3100 4700
+Wire Wire Line
+	2750 4700 2750 4750
+Wire Wire Line
+	2750 4750 3100 4750
+Wire Wire Line
+	5250 1900 5250 2350
+Wire Wire Line
+	4350 3050 5000 3050
+Wire Wire Line
+	4350 1900 5250 1900
+Connection ~ 5250 3050
+$Comp
+L Battery:BQ2920X U1
+U 1 1 6150A841
+P 4350 2500
+F 0 "U1" H 4400 3000 50  0000 L CNN
+F 1 "BQ29200" H 4400 2900 50  0000 L CNN
+F 2 "Battery:BQ2920X" H 5000 3150 50  0001 C CNN
+F 3 "" H 5000 3150 50  0001 C CNN
+F 4 "2383074" H 4350 2500 50  0001 C CNN "Farnell"
+F 5 "~" H 4350 2500 50  0001 C CNN "RS"
+	1    4350 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery:Si9933CDY Q1
+U 2 1 61CA0EF1
+P 5150 3900
+F 0 "Q1" V 5500 3900 50  0000 C BNN
+F 1 "Si9933CDY" V 5400 3900 50  0000 C CNN
+F 2 "Battery:SOIC-8_3.9x4.9mm_P1.27mm" H 5350 3825 50  0001 L CIN
+F 3 "" V 5150 3900 50  0001 L CNN
+F 4 "1779275" H 5150 3900 50  0001 C CNN "Farnell"
+F 5 "~" H 5150 3900 50  0001 C CNN "RS"
+	2    5150 3900
+	0    1    -1   0   
+$EndComp
+$Comp
+L Battery:Si9933CDY Q1
+U 1 1 61C97415
+P 2850 4050
+F 0 "Q1" H 3050 4000 50  0000 L BNN
+F 1 "Si9933CDY" H 3050 4100 50  0000 L CNN
+F 2 "Battery:SOIC-8_3.9x4.9mm_P1.27mm" H 3050 3975 50  0001 L CIN
+F 3 "" V 2850 4050 50  0001 L CNN
+F 4 "1779275" H 2850 4050 50  0001 C CNN "Farnell"
+F 5 "~" H 2850 4050 50  0001 C CNN "RS"
+	1    2850 4050
+	-1   0    0    1   
+$EndComp
+Connection ~ 9600 3150
+Wire Notes Line
+	6150 3350 2100 3350
+Wire Notes Line
+	2100 3350 2100 1300
+Wire Notes Line
+	2100 1300 6150 1300
+Wire Notes Line
+	6150 1300 6150 3350
+Wire Notes Line
+	6900 2300 6250 2300
+Text Notes 9950 4950 2    50   ~ 0
+Battery Test Points
+Wire Notes Line
+	10000 5000 10000 4400
+Wire Notes Line
+	10000 4400 9000 4400
+Wire Notes Line
+	9000 4400 9000 5000
+Wire Notes Line
+	9000 5000 10000 5000
+Wire Notes Line
+	10000 3800 7450 3800
+Wire Notes Line
+	7450 3800 7450 2650
+Wire Notes Line
+	7450 2650 10000 2650
+Wire Notes Line
+	10000 2650 10000 3800
+Text Notes 9950 3750 2    50   ~ 0
+1.8V/500mA LDO Regulator
+Wire Notes Line
+	10700 3250 10100 3250
+Wire Notes Line
+	7450 2450 10000 2450
+Wire Notes Line
+	10000 2450 10000 1300
+Wire Notes Line
+	10000 1300 7450 1300
+Wire Notes Line
+	7450 1300 7450 2450
+Text Notes 9950 2400 2    50   ~ 0
+3.3V/500mA LDO Regulator
+Wire Notes Line
+	10100 1900 10700 1900
+Wire Notes Line
+	6250 2850 6900 2850
+Wire Notes Line
+	6900 2850 6900 2300
+Text Notes 6850 2800 2    50   ~ 0
+Unregulated\nVBatt Output
+Wire Notes Line
+	6250 2300 6250 2850
+Text Notes 6850 4900 2    50   ~ 0
+8.9-22V\nCharger Input
+Wire Notes Line
+	6250 4400 6250 4950
+Wire Notes Line
+	6250 4950 6900 4950
+Wire Notes Line
+	6900 4400 6250 4400
+Wire Notes Line
+	6900 4400 6900 4950
+Wire Notes Line
+	2100 3500 2100 5900
+Wire Notes Line
+	2100 5900 6150 5900
+Wire Notes Line
+	6150 3500 2100 3500
+Wire Notes Line
+	6150 5900 6150 3500
+Text Notes 6100 3300 2    50   ~ 0
+Load Balancer
+Text Notes 6100 5850 2    50   ~ 0
+Charger
+Wire Notes Line
+	1800 2350 1000 2350
+Wire Notes Line
+	1000 2350 1000 2950
+Wire Notes Line
+	1000 2950 1800 2950
+Wire Notes Line
+	1800 2350 1800 2950
+Text Notes 1750 2900 2    50   ~ 0
+Battery Connector
+Wire Notes Line
+	4200 5000 4200 5500
+Wire Notes Line
+	4800 5500 4200 5500
+Wire Notes Line
+	4800 5000 4800 5500
+Wire Notes Line
+	4200 5000 4800 5000
+Text Notes 4750 5200 2    50   ~ 0
+10k NTC\nThermistor
+Wire Wire Line
+	4300 5400 3750 5400
+Wire Wire Line
+	3750 5300 4300 5300
+$Comp
+L Battery:Conn_01x02 J6
+U 1 1 6154CF6A
+P 4500 5300
+F 0 "J6" H 4600 5300 50  0000 L CNN
+F 1 "NTC" H 4600 5200 50  0000 L CNN
+F 2 "Battery:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal" H 4500 5300 50  0001 C CNN
+F 3 "~" H 4500 5300 50  0001 C CNN
+F 4 "2576866" H 4500 5300 50  0001 C CNN "Farnell"
+F 5 "~" H 4500 5300 50  0001 C CNN "RS"
+	1    4500 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 5100 2000 2500
+Connection ~ 2000 2500
+Wire Wire Line
+	2000 2500 2750 2500
+Wire Wire Line
+	1900 2700 1900 5600
+Connection ~ 1900 2700
+Wire Wire Line
+	1900 2700 2750 2700
+Wire Wire Line
+	2000 5100 2750 5100
+Wire Wire Line
+	1900 5600 2550 5600
+$Comp
+L Battery:TestPoint TP3
+U 1 1 615829E2
+P 4950 2400
+F 0 "TP3" V 5000 2500 50  0000 C TNN
+F 1 "TestPoint" H 5050 2450 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 5150 2400 50  0001 C CNN
+F 3 "~" H 5150 2400 50  0001 C CNN
+F 4 "~" H 4950 2400 50  0001 C CNN "Farnell"
+F 5 "~" H 4950 2400 50  0001 C CNN "RS"
+	1    4950 2400
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4850 2400 4950 2400
+Wire Wire Line
+	5250 4550 5150 4550
+$Comp
+L Battery:TestPoint TP6
+U 1 1 6198C32A
+P 5250 4550
+F 0 "TP6" V 5300 4650 50  0000 C TNN
+F 1 "TestPoint" H 5350 4600 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 5450 4550 50  0001 C CNN
+F 3 "~" H 5450 4550 50  0001 C CNN
+F 4 "~" H 5250 4550 50  0001 C CNN "Farnell"
+F 5 "~" H 5250 4550 50  0001 C CNN "RS"
+	1    5250 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 4700 2550 5600
+Connection ~ 2550 5600
+Wire Wire Line
+	2550 5600 2750 5600
+Wire Notes Line
+	10100 2400 10700 2400
+Wire Notes Line
+	10100 1900 10100 2400
+Wire Notes Line
+	10700 2400 10700 1900
+Text Notes 10650 2350 2    50   ~ 0
+3.3V Output
+Wire Notes Line
+	10100 3750 10700 3750
+Wire Notes Line
+	10100 3250 10100 3750
+Wire Notes Line
+	10700 3750 10700 3250
+Text Notes 10650 3700 2    50   ~ 0
+1.8V Output
+Wire Wire Line
+	5650 5600 5550 5600
+Connection ~ 5550 5600
+Wire Wire Line
+	5650 3050 5550 3050
+Connection ~ 5550 3050
+Wire Wire Line
+	5650 1600 5550 1600
+Connection ~ 5550 1600
+$Comp
+L Battery:TestPoint TP5
+U 1 1 616ACCDE
+P 5650 5600
+F 0 "TP5" V 5650 5800 50  0000 L CNN
+F 1 "TestPoint" H 5750 5650 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 5850 5600 50  0001 C CNN
+F 3 "~" H 5850 5600 50  0001 C CNN
+F 4 "~" H 5650 5600 50  0001 C CNN "Farnell"
+F 5 "~" H 5650 5600 50  0001 C CNN "RS"
+	1    5650 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:TestPoint TP4
+U 1 1 616AD2DF
+P 5650 3800
+F 0 "TP4" V 5650 4000 50  0000 L CNN
+F 1 "TestPoint" H 5750 3850 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 5850 3800 50  0001 C CNN
+F 3 "~" H 5850 3800 50  0001 C CNN
+F 4 "~" H 5650 3800 50  0001 C CNN "Farnell"
+F 5 "~" H 5650 3800 50  0001 C CNN "RS"
+	1    5650 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:TestPoint TP2
+U 1 1 616AD75F
+P 5650 3050
+F 0 "TP2" V 5650 3250 50  0000 L CNN
+F 1 "TestPoint" H 5750 3100 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 5850 3050 50  0001 C CNN
+F 3 "~" H 5850 3050 50  0001 C CNN
+F 4 "~" H 5650 3050 50  0001 C CNN "Farnell"
+F 5 "~" H 5650 3050 50  0001 C CNN "RS"
+	1    5650 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:TestPoint TP1
+U 1 1 616ADB06
+P 5650 1600
+F 0 "TP1" V 5650 1800 50  0000 L CNN
+F 1 "TestPoint" H 5750 1650 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 5850 1600 50  0001 C CNN
+F 3 "~" H 5850 1600 50  0001 C CNN
+F 4 "~" H 5650 1600 50  0001 C CNN "Farnell"
+F 5 "~" H 5650 1600 50  0001 C CNN "RS"
+	1    5650 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:TestPoint TP9
+U 1 1 616AE7A5
+P 9550 4550
+F 0 "TP9" V 9550 4750 50  0000 L CNN
+F 1 "TestPoint" H 9650 4600 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9750 4550 50  0001 C CNN
+F 3 "~" H 9750 4550 50  0001 C CNN
+F 4 "~" H 9550 4550 50  0001 C CNN "Farnell"
+F 5 "~" H 9550 4550 50  0001 C CNN "RS"
+	1    9550 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 4750 9550 4750
+Text Label 9100 4750 0    50   ~ 0
+BATT-
+$Comp
+L Battery:TestPoint TP8
+U 1 1 61A93411
+P 9700 3150
+F 0 "TP8" V 9750 3250 50  0000 C TNN
+F 1 "TestPoint" H 9800 3200 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9900 3150 50  0001 C CNN
+F 3 "~" H 9900 3150 50  0001 C CNN
+F 4 "~" H 9700 3150 50  0001 C CNN "Farnell"
+F 5 "~" H 9700 3150 50  0001 C CNN "RS"
+	1    9700 3150
+	0    1    -1   0   
+$EndComp
+$Comp
+L Battery:TestPoint TP10
+U 1 1 616F67FD
+P 9550 4650
+F 0 "TP10" V 9550 4850 50  0000 L CNN
+F 1 "TestPoint" H 9650 4700 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9750 4650 50  0001 C CNN
+F 3 "~" H 9750 4650 50  0001 C CNN
+F 4 "~" H 9550 4650 50  0001 C CNN "Farnell"
+F 5 "~" H 9550 4650 50  0001 C CNN "RS"
+	1    9550 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:TestPoint TP11
+U 1 1 616F6974
+P 9550 4750
+F 0 "TP11" V 9550 4950 50  0000 L CNN
+F 1 "TestPoint" H 9650 4800 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9750 4750 50  0001 C CNN
+F 3 "~" H 9750 4750 50  0001 C CNN
+F 4 "~" H 9550 4750 50  0001 C CNN "Farnell"
+F 5 "~" H 9550 4750 50  0001 C CNN "RS"
+	1    9550 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 2450 5250 3050
+Wire Wire Line
+	4850 2600 5000 2600
+Wire Wire Line
+	5000 2600 5000 3050
+Connection ~ 5000 3050
+Wire Wire Line
+	5000 3050 5250 3050
+Connection ~ 5400 5600
+Wire Wire Line
+	5400 5600 5550 5600
+Wire Wire Line
+	3750 5600 5400 5600
+Connection ~ 5400 3050
+Wire Wire Line
+	5400 3050 5550 3050
+Wire Wire Line
+	5250 3050 5400 3050
+Connection ~ 5400 1600
+Wire Wire Line
+	5400 1600 5550 1600
+Wire Wire Line
+	4350 1600 5400 1600
+Text Notes 9950 5500 2    50   ~ 0
+GND Test Points
+Wire Wire Line
+	9350 5200 9550 5200
+Wire Wire Line
+	9350 5300 9550 5300
+$Comp
+L Battery:TestPoint TP12
+U 1 1 616F50CA
+P 9550 5200
+F 0 "TP12" V 9550 5400 50  0000 L CNN
+F 1 "TestPoint" H 9650 5250 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9750 5200 50  0001 C CNN
+F 3 "~" H 9750 5200 50  0001 C CNN
+F 4 "~" H 9550 5200 50  0001 C CNN "Farnell"
+F 5 "~" H 9550 5200 50  0001 C CNN "RS"
+	1    9550 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:TestPoint TP13
+U 1 1 616F50D2
+P 9550 5300
+F 0 "TP13" V 9550 5500 50  0000 L CNN
+F 1 "TestPoint" H 9650 5350 50  0001 L CNN
+F 2 "Battery:TestPoint_Pad_D2.0mm" H 9750 5300 50  0001 C CNN
+F 3 "~" H 9750 5300 50  0001 C CNN
+F 4 "~" H 9550 5300 50  0001 C CNN "Farnell"
+F 5 "~" H 9550 5300 50  0001 C CNN "RS"
+	1    9550 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:GND #PWR01
+U 1 1 616FDE39
+P 9350 5200
+F 0 "#PWR01" H 9220 5240 50  0001 L CNN
+F 1 "GND" V 9350 5100 50  0000 R CNN
+F 2 "" H 9350 5200 50  0001 C CNN
+F 3 "" H 9350 5200 50  0001 C CNN
+	1    9350 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery:GND #PWR012
+U 1 1 616FE65C
+P 9350 5300
+F 0 "#PWR012" H 9220 5340 50  0001 L CNN
+F 1 "GND" V 9350 5200 50  0000 R CNN
+F 2 "" H 9350 5300 50  0001 C CNN
+F 3 "" H 9350 5300 50  0001 C CNN
+	1    9350 5300
+	0    1    1    0   
+$EndComp
+Wire Notes Line
+	10000 5550 10000 5050
+Wire Notes Line
+	10000 5050 9000 5050
+Wire Notes Line
+	9000 5050 9000 5550
+Wire Notes Line
+	9000 5550 10000 5550
+$EndSCHEMATC
