@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "2S Li-Ion Battery Charger"
-Date "2021-09-28"
+Date "2021-10-17"
 Rev "1.1"
 Comp "Cambridge University Spaceflight"
 Comment1 "Drawn By Henry Franks"
